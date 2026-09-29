@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpsDesk — Incident Memory</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div>
+            <div class="brand">OpsDesk</div>
+            <div class="subbrand">incident response with memory</div>
+        </div>
+        <div id="status" class="status">checking connection...</div>
+    </header>
+
+    <main class="layout">
+        <section class="main-column">
+            <div class="hero">
+                <span class="eyebrow">PRODUCTION OPERATIONS</span>
+                <h1>Turn old incidents into useful context.</h1>
+                <p>
+                    Ask about an incident and OpsDesk checks previous incidents
+                    before responding.
+                </p>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Incident assistant</h2>
+                        <p>Try the sample scenario or describe a real incident.</p>
+                    </div>
+                    <button id="seedBtn" class="secondary">Load sample history</button>
+                </div>
+
+                <div id="chat" class="chat">
+                    <div class="message assistant">
+                        <div class="message-label">OPSDESK</div>
+                        <div>
+                            I’m ready. Try:
+                            <strong>“Checkout API is returning 503 errors again.”</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="chatForm" class="composer">
+                    <textarea id="message" rows="3"
+                        placeholder="Describe the incident..."></textarea>
+                    <button type="submit">Investigate</button>
+                </form>
+            </div>
+        </section>
+
+        <aside class="side-column">
+            <div class="panel memory-panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Memory used</h2>
+                        <p id="memorySummary">No search yet.</p>
+                    </div>
+                </div>
+                <div id="memories" class="memory-list">
+                    <div class="empty">Relevant memories will appear here.</div>
+                </div>
+            </div>
+
+            <div class="panel">
+                <div class="panel-header">
+                    <div>
+                        <h2>Incident history</h2>
+                        <p>Local records used for the demo.</p>
+                    </div>
+                </div>
+                <div id="incidents" class="incident-list"></div>
+            </div>
+        </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
