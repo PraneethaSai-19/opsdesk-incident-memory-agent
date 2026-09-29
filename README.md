@@ -38,6 +38,7 @@ Key Features
 - 👀 Visible memory results in the UI
 - 🖥️ Simple web interface for incident investigation
 - 💾 Local incident data storage using SQLite
+
 The Problem
 When a production incident occurs, engineers commonly need to answer questions such as:
 - Have we seen this problem before?
@@ -45,9 +46,11 @@ When a production incident occurs, engineers commonly need to answer questions s
 - How did we resolve it?
 - What should we check first?
 - Was this related to a traffic spike, database issue, or configuration change?
+
 A traditional AI assistant may provide a generic troubleshooting response based only on the current prompt.
 OpsDesk adds historical context.
 If a similar incident happened previously, the agent can retrieve the relevant memory and use it when constructing its response.
+
 How Hindsight Is Used
 Hindsight is the persistent memory layer of OpsDesk.
 It is used for two important operations:
@@ -240,8 +243,10 @@ After activating the virtual environment and starting Hindsight:
 python app.py
 
 Open the local Flask URL displayed in the terminal.
+
 Example Workflow
 A typical OpsDesk interaction follows these steps:
+
 Step 1 — Historical incident
 An incident is retained in Hindsight.
 Checkout API
@@ -283,9 +288,11 @@ Historical Incidents
 Context-Aware AI Response
 
 The difference is that OpsDesk can use information the team has already learned instead of treating every incident as completely new.
+
 Current Scope
 OpsDesk is a prototype focused on demonstrating persistent memory for incident response.
 The current implementation uses realistic incident data for demonstration and is not connected to a production monitoring or incident-management platform.
+
 Future Improvements
 Possible extensions include:
 - Automatic ingestion of incident reports
@@ -298,6 +305,7 @@ Possible extensions include:
 - Slack integration
 - Integration with incident management platforms
 - Automatic incident summarization
+
 Security Notes
 Do not commit secrets.
 The following files should remain local:
@@ -310,11 +318,14 @@ Hindsight Resources
 - Hindsight GitHub: https://github.com/vectorize-io/hindsight
 - Hindsight Documentation: https://hindsight.vectorize.io/
 - Vectorize Agent Memory: https://vectorize.io/what-is-agent-memory
+
 Project
 OpsDesk
 AI Incident Response Agent with Persistent Memory
+
 Built with:
 Python · Flask · Hindsight · Groq · SQLite · HTML · CSS · JavaScript
+
 Team
 This project was developed collaboratively as a team project.
 Team members:
